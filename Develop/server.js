@@ -13,12 +13,6 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
-//Data Parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-
 //Route to the Notes
 app.get("/notes", (req,res)=>{
     res.sendFile(path.join(__dirname, './public/notes.html'));
