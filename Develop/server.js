@@ -42,12 +42,12 @@ app.post("/api/notes", function(req, res) {
             console.log(error);
         }
         const notes = JSON.parse(response);
-        const noteRequest = req.body;
+        const noteGet = req.body;
         const newNoteID = notes.length + 1;
         const newNote = {
             id: newNoteID,
-            title: noteRequest.title,
-            text: noteRequest.text
+            title: noteGet.title,
+            text: noteGet.text
         };
         notes.push(newNote);
         res.json(newNote);
